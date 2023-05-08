@@ -1,0 +1,25 @@
+{
+  // 显示推导得到的函数返回值类型
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  // 显示函数入参的名称
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  // 显示函数入参的类型
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  // 显示变量的类型
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false,
+  "eslint.probe": [
+    "typescript",
+    "javascript",
+    "vue"
+  ],
+  "eslint.validate": [
+    "typescript",
+    "javascript",
+    "vue"
+  ],
+  "files.eol": "\n"
+}
