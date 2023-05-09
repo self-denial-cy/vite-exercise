@@ -2,12 +2,13 @@ import { defineConfig, normalizePath } from 'vite';
 import path from 'path';
 import vue from '@vitejs/plugin-vue';
 import autoprefixer from 'autoprefixer';
+import svg from 'vite-svg-loader';
 
 // 全局 scss 文件的路径，通过 normalizePath 解决 Windows 下的路径问题
 const variablePath = normalizePath(path.join(__dirname, './src/assets/scss/variable.scss'));
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), svg()],
   css: {
     postcss: {
       plugins: [autoprefixer()],

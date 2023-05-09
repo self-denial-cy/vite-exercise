@@ -6,4 +6,7 @@
 
 <script setup lang="ts">
 import Header from './components/Header.vue';
+import { version } from '../package.json';
+
+console.log(version);
 </script>
