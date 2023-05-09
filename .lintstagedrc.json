@@ -2,6 +2,9 @@
   "*.ts": [
     "eslint --fix"
   ],
+  "*.tsx": [
+    "eslint --fix"
+  ],
   "*.vue": [
     "eslint --fix"
   ]

@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "eslint": "eslint . --ext .vue,.ts"
+    "eslint": "eslint . --ext .vue,.ts,.tsx"
   },
   "repository": {
     "type": "git",
@@ -54,6 +54,7 @@
     "@release-it/conventional-changelog": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
+    "@vitejs/plugin-vue": "^4.1.0",
     "commitizen": "^4.3.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
@@ -63,7 +64,6 @@
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
     "release-it": "^15.10.1",
-    "@vitejs/plugin-vue": "^4.1.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vue-tsc": "^1.4.2"
