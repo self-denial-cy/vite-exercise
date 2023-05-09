@@ -41,7 +41,9 @@
       }
     }
   ],
-  "rules": {},
+  "rules": {
+    "vue/multi-word-component-names": 0
+  },
   "extends": [
     "plugin:vue/vue3-recommended",
     "eslint:recommended",

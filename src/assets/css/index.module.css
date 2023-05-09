@@ -1,0 +1,6 @@
+/* CSS Modules 在 Vite 也是一个开箱即用的能力，后缀带有 .module 的样式文件自动应用 CSS Modules */
+
+.font-class {
+  font-family: monospace;
+  font-style: italic;
+}

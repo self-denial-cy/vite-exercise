@@ -8,7 +8,8 @@
   // 显示变量的类型
   "typescript.inlayHints.variableTypes.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "editor.formatOnSave": false,
   "eslint.probe": [
@@ -20,6 +21,14 @@
     "typescript",
     "javascript",
     "vue"
+  ],
+  "stylelint.validate": [
+    "vue",
+    "sass",
+    "scss",
+    "less",
+    "stylus",
+    "css"
   ],
   "files.eol": "\n"
 }
