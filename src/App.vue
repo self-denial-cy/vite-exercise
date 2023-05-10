@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="vite-app">
     <Header></Header>
   </div>
 </template>
@@ -9,4 +9,11 @@ import Header from './components/Header.vue';
 import { version } from '../package.json';
 
 console.log(version);
+console.log(import.meta.env.VITE_KEY);
 </script>
+
+<style lang="less">
+.vite-app {
+  display: flex;
+}
+</style>
