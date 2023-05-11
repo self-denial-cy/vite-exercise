@@ -6,6 +6,7 @@
     "release": "release-it",
     "prepare": "husky install",
     "dev": "vite",
+    "pre-build": "vite --force",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint . --ext .vue,.ts,.tsx",

@@ -5,6 +5,9 @@ import autoprefixer from 'autoprefixer';
 import svg from 'vite-svg-loader';
 import imagemin from 'vite-plugin-imagemin';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import cdn from './cdn-import-plugin';
+
+console.log(cdn());
 
 // 全局 scss 文件的路径，通过 normalizePath 解决 Windows 下的路径问题
 const variablePath = normalizePath(path.join(__dirname, './src/assets/scss/variable.scss'));
@@ -63,6 +66,12 @@ export default defineConfig({
     alias: {
       // 注意，alias 别名配置不仅在 JavaScript 的 import 语句中生效，在 CSS 代码的 @import 和 url 导入语句中同样生效
       '@assets': path.join(__dirname, './src/assets'),
+      '@c': path.join(__dirname, './src/components'),
+    },
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      plugins: [cdn()],
     },
   },
 });

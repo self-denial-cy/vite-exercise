@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import styles from '@assets/css/index.module.css';
 import SvgComponent from '@assets/imgs/vite.svg?component';
-import SvgIcon from './SvgIcon.vue';
+import SvgIcon from '@c/SvgIcon.vue';
 
 const imgSrc = new URL('./logo.svg', import.meta.env.VITE_IMG_BASE_URL).href;
 
