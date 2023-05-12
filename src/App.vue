@@ -10,8 +10,6 @@
 import Header from './components/Header.vue';
 import { version } from '../package.json';
 import Worker from './workers/index?worker';
-// @ts-expect-error CDN 拉取依赖
-import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 // 初始化 Worker 实例
 const worker = new Worker();

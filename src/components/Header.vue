@@ -3,7 +3,7 @@
     <h4 class="title" :class="styles['font-class']">Header</h4>
     <!-- svg 文件在构建时会被打包成 component，因此需要通过 ?url 指定只生成链接地址就行 -->
     <!-- 可能是受 vite-svg-loader 这个插件的影响 -->
-    <img class="img-class" src="@assets/imgs/vite.svg?url" />
+    <img class="img-class" src="../assets/imgs/vite.svg?url" />
     <img class="img-class" :src="imgSrc" />
     <SvgComponent width="64" height="64" style="display: block; margin: 0 auto"></SvgComponent>
     <img v-for="(item, index) in icons" :key="index" class="img-class" :src="item" />
