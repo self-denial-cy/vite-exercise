@@ -1,5 +1,3 @@
-/* eslint-disable no-debugger */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Plugin, OnLoadResult } from 'esbuild';
 import http from 'node:http';
 import https from 'node:https';
@@ -18,7 +16,6 @@ export default function (): Plugin {
 
       build.onLoad({ filter: /.*/, namespace: 'cdn' }, async (args) => {
         // console.log(args);
-
         const contents = await new Promise((resolve, reject) => {
           const fetch = (url: string) => {
             console.log(`Downloading: ${url}`);
@@ -42,9 +39,7 @@ export default function (): Plugin {
           };
           fetch(args.path);
         });
-
         // console.log(contents);
-
         return { contents } as OnLoadResult;
       });
 
