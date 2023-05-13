@@ -16,7 +16,11 @@ export default defineComponent({
     },
     name: {
       type: String,
-      required: true,
+      default: '',
+    },
+    fullname: {
+      type: String,
+      default: '',
     },
     color: {
       type: String,
@@ -32,7 +36,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const symbolId = computed(() => `#${props.prefix}-${props.name}`);
+    const symbolId = computed(() => `#${props.fullname ? props.fullname : `${props.prefix}-${props.name}`}`);
     return { symbolId };
   },
 });

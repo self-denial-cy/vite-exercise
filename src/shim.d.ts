@@ -1,5 +1,14 @@
 /// <reference types="vite/client" />
 /// <reference types="vite-svg-loader" />
+/// <reference types="vite-plugin-svg-icons/client" />
+
+/**
+ * 注意，引入 vite-plugin-svg-icons/client 需要在 vite-plugin-svg-icons/package.json
+ * 中的 exports 中新增 "./client": { "types": "./client.d.ts" }
+ * 或者直接 import 'vite-plugin-svg-icons/client';
+ */
+
+// import 'vite-plugin-svg-icons/client';
 
 interface ImportMeta {
   readonly env: ImportMetaEnv;
