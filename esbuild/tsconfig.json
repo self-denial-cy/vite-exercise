@@ -2,7 +2,8 @@
   "include": [
     "src",
     "plugins",
-    "build.ts"
+    "build.ts",
+    "utils"
   ],
   "compilerOptions": {
     "target": "ES2020",

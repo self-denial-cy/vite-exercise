@@ -1,6 +1,7 @@
 import { build } from 'esbuild';
 import path from 'path';
 import cdn from './plugins/cdn-import-plugin';
+import html from './plugins/html-generate-plugin';
 
 async function run() {
   build({
@@ -12,7 +13,7 @@ async function run() {
     splitting: true,
     sourcemap: true,
     metafile: true,
-    plugins: [cdn()],
+    plugins: [cdn(), html()],
   }).then(() => {
     console.log('🚀 Build Finished');
   });
