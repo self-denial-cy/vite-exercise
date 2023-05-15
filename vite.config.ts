@@ -8,6 +8,7 @@ import svg from 'vite-svg-loader';
 // import imagemin from 'vite-plugin-imagemin';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
+import legacy from '@vitejs/plugin-legacy';
 import virtual from './plugins/virtual-module';
 
 // 全局 scss 文件的路径，通过 normalizePath 解决 Windows 下的路径问题
@@ -52,6 +53,7 @@ export default defineConfig({
         vendor: ['vue'],
       },
     }),
+    legacy(),
   ],
   css: {
     postcss: {
