@@ -5,6 +5,7 @@ import autoprefixer from 'autoprefixer';
 import svg from 'vite-svg-loader';
 import imagemin from 'vite-plugin-imagemin';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import virtual from './plugins/virtual-module';
 
 // 全局 scss 文件的路径，通过 normalizePath 解决 Windows 下的路径问题
 const variablePath = normalizePath(path.join(__dirname, './src/assets/scss/variable.scss'));
@@ -40,6 +41,7 @@ export default defineConfig({
     createSvgIconsPlugin({
       iconDirs: [path.join(__dirname, './src/assets/imgs/sprite')],
     }),
+    virtual(),
   ],
   css: {
     postcss: {

@@ -19,3 +19,13 @@ interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_IMG_BASE_URL: string;
 }
+
+declare module 'virtual:fib' {
+  const fib: (n: number) => number;
+  export default fib;
+}
+
+declare module 'virtual:env' {
+  const env: Record<string, unknown>;
+  export default env;
+}

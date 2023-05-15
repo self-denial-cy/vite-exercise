@@ -3,6 +3,8 @@
     <Header></Header>
     <div class="bg-image"></div>
     <button class="btn-class" @click="confetti()">Run</button>
+    <button class="btn-class" @click="alertFib()">Alert</button>
+    <button class="btn-class" @click="logEnv()">Env</button>
   </div>
 </template>
 
@@ -10,6 +12,8 @@
 import Header from './components/Header.vue';
 import { version } from '../package.json';
 import Worker from './workers/index?worker';
+import fib from 'virtual:fib';
+import env from 'virtual:env';
 
 // 初始化 Worker 实例
 const worker = new Worker();
@@ -20,6 +24,14 @@ worker.addEventListener('message', (evt) => {
 
 console.log(version);
 console.log(import.meta.env.VITE_KEY);
+
+const alertFib = () => {
+  alert(`结果: ${fib(10)}`);
+};
+
+const logEnv = () => {
+  console.log(env);
+};
 </script>
 
 <style lang="less">
