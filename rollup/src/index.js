@@ -4,3 +4,5 @@ import _ from 'lodash';
 console.log(add(1, 3));
 
 console.log(_.VERSION);
+
+console.log(import.meta.url);

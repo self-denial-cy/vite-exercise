@@ -1,5 +1,4 @@
-import { defineConfig, normalizePath } from 'vite';
-// import { defineConfig, normalizePath, splitVendorChunkPlugin } from 'vite';
+import { defineConfig, normalizePath, splitVendorChunkPlugin } from 'vite';
 import path from 'path';
 import vue from '@vitejs/plugin-vue';
 import inspect from 'vite-plugin-inspect';
@@ -7,7 +6,6 @@ import autoprefixer from 'autoprefixer';
 import svg from 'vite-svg-loader';
 // import imagemin from 'vite-plugin-imagemin';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
-import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 import legacy from '@vitejs/plugin-legacy';
 import virtual from './plugins/virtual-module';
 
@@ -22,7 +20,7 @@ export default defineConfig({
     vue(),
     inspect(),
     svg(),
-    // splitVendorChunkPlugin(),
+    splitVendorChunkPlugin(),
     // 压缩图片资源，减小打包的体积【打包时间会随着图片资源的数量提升，对于包体积和打包时间两者的平衡自行把握】
     // imagemin({
     //   optipng: {
@@ -48,11 +46,6 @@ export default defineConfig({
       iconDirs: [path.join(__dirname, './src/assets/imgs/sprite')],
     }),
     virtual(),
-    chunkSplitPlugin({
-      customSplitting: {
-        vendor: ['vue'],
-      },
-    }),
     legacy(),
   ],
   css: {
