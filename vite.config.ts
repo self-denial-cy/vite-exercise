@@ -8,6 +8,7 @@ import svg from 'vite-svg-loader';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import legacy from '@vitejs/plugin-legacy';
 import virtual from './plugins/virtual-module';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // 全局 scss 文件的路径，通过 normalizePath 解决 Windows 下的路径问题
 const variablePath = normalizePath(path.join(__dirname, './src/assets/scss/variable.scss'));
@@ -47,6 +48,7 @@ export default defineConfig({
     }),
     virtual(),
     legacy(),
+    visualizer({ open: true }),
   ],
   css: {
     postcss: {
@@ -71,6 +73,7 @@ export default defineConfig({
     //     },
     //   },
     // },
+    target: 'es6',
     assetsInlineLimit: 8 * 1024, // 静态资源是否提取成单文件的临界值，小于 8KB 的文件被 base64 内联【svg 始终会打包成单文件】
   },
   resolve: {
