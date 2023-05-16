@@ -2,7 +2,7 @@
 
 ## Browserslist 最佳实践集合
 
-```json
+```
 // 现代浏览器
 last 2 versions and since 2018 and > 0.5%
 // 兼容低版本 PC 浏览器
